@@ -5,7 +5,7 @@
 #import <React/RCTLog.h>
 #import <React/RCTUtils.h>
 
-static NSString *const RCTShowDevMenuNotification = @"RCTShowDevMenuNotification";
+static NSString *const RCTShowDevMenuNotification = @"EXShakeGestureNotification";
 
 #if !RCT_DEV
 
