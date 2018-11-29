@@ -35,6 +35,8 @@ public class RNShakeEventModule extends ReactContextBaseJavaModule implements Sh
     private void sendEvent(ReactContext reactContext,
                            String eventName,
                            @Nullable WritableMap params) {
-        reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
+        if (reactContext.hasActiveCatalystInstance()) {
+            reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
+        }
     }
 }
